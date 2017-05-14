@@ -14,3 +14,10 @@
 	border-color: black;
 	border-style: solid;
 }
+
+.bottom{
+	color: red;
+	font-size: 15px;
+	border-radius: 15px;
+	border: 10px;
+}

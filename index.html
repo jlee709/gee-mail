@@ -3,7 +3,7 @@
 		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
 
-<nav class="zombie">&nbsp;Justins Zombie Mail</nav>
+
 
     <script>
       window.onload = function(){
@@ -12,6 +12,15 @@
         
        // alert("Hello Welcome to Justins Zombie mail");
        // alert("press ok to read mail, but be warned zombies are hiding in here.....somehwere....");
+
+       function showInbox(){
+       	for(var i=0; i<window.geemails.length; i++){
+       		var inbox = window.geemails[i];
+       		
+       	}	
+       }
+
+       inbox = document.getElementById("inbox")
 
        mailTable = document.getElementById("mailTable");
        tr = document.createElement("tr");
@@ -26,18 +35,18 @@
         td_date = document.createElement("td");
         td_subject = document.createElement("td");
 
-       		console.log(window.geemails[i].subject);
+       	
        		td_sender.appendChild(document.createTextNode(window.geemails[i].sender));
+
        		td_subject.appendChild(document.createTextNode(window.geemails[i].subject));
+
        		td_date.appendChild(document.createTextNode(window.geemails[i].date));
+
        		tr.appendChild(td_sender);
        		tr.appendChild(td_subject);
        		tr.appendChild(td_date);
        			mailTable.appendChild(tr);
-
-
-       		
-       };
+	};
 
 
 
@@ -45,27 +54,28 @@
 
     </script>
 	</head>
+	
 	<body>
-
-
+		<nav class="zombie">&nbsp;Justins Zombie Mail</nav>
+</table>
 		<div class="container" id="main">
 
 		
 			<table id="mailTable" width="100%" cellpadding="0" cellspacing="0" border="0">
 
-					<td>Sender</td>
-					<td>Subject</td>
-					<td>Date</td>
+		<!-- 	javascript populating table -->
 
 			</table>
 
  		</div>
+ 		
+		 <div class="bottom">
+			<footer>Justins Zombie Mail</footer>
+		 </div>
+		
 
-		<div>
-			
-		</div>
 	</body>
-</html><tr>
-			<td>Sender</td>
-			<td>Date</td>
-			</tr>
+</html>
+
+
+		
