@@ -10,8 +10,8 @@
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
         
-       // alert("Hello Welcome to Justins Zombie mail");
-       // alert("press ok to read mail, but be warned zombies are hiding in here.....somehwere....");
+       alert("Hello Welcome to Justins Zombie mail");
+       alert("press ok to read mail, but be warned zombies are hiding in here.....somehwere....");
 
        function showInbox(){
        	for(var i=0; i<window.geemails.length; i++){
@@ -22,12 +22,17 @@
 
        inbox = document.getElementById("inbox")
 
+      // creating table for the auto generated table using JS
+       
        mailTable = document.getElementById("mailTable");
        tr = document.createElement("tr");
        td_sender = document.createElement("td");
        td_date = document.createElement("td");
        td_subject = document.createElement("td");
 
+       // iterating through the array to display data
+
+       
        for(i=0; i<window.geemails.length; i++){""
        		
        	tr = document.createElement("tr");
