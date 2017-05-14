@@ -10,25 +10,53 @@
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
         
+       // alert("Hello Welcome to Justins Zombie mail");
+       // alert("press ok to read mail, but be warned zombies are hiding in here.....somehwere....");
+
+       mailTable = document.getElementById("mailTable");
+       tr = document.createElement("tr");
+       td_sender = document.createElement("td");
+       td_date = document.createElement("td");
+       td_subject = document.createElement("td");
+
+       for(i=0; i<window.geemails.length; i++){""
+       		
+       	tr = document.createElement("tr");
+        td_sender = document.createElement("td");
+        td_date = document.createElement("td");
+        td_subject = document.createElement("td");
+
+       		console.log(window.geemails[i].subject);
+       		td_sender.appendChild(document.createTextNode(window.geemails[i].sender));
+       		td_subject.appendChild(document.createTextNode(window.geemails[i].subject));
+       		td_date.appendChild(document.createTextNode(window.geemails[i].date));
+       		tr.appendChild(td_sender);
+       		tr.appendChild(td_subject);
+       		tr.appendChild(td_date);
+       			mailTable.appendChild(tr);
+
+
+       		
+       };
+
+
+
       };
 
     </script>
 	</head>
 	<body>
 
-	<!-- date - The date message was sent
-	subject - The subject of the message
-	sender - The sender of the message
-	body - The GeeMail message content -->
 
 		<div class="container" id="main">
 
-			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+		
+			<table id="mailTable" width="100%" cellpadding="0" cellspacing="0" border="0">
 
 					<td>Sender</td>
 					<td>Subject</td>
 					<td>Date</td>
-				</tr>
+
 			</table>
 
  		</div>
@@ -37,4 +65,7 @@
 			
 		</div>
 	</body>
-</html>
+</html><tr>
+			<td>Sender</td>
+			<td>Date</td>
+			</tr>
