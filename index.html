@@ -10,68 +10,90 @@
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
         
-       alert("Hello Welcome to Justins Zombie mail");
-       alert("press ok to read mail, but be warned zombies are hiding in here.....somehwere....");
-
-       function showInbox(){
-       	for(var i=0; i<window.geemails.length; i++){
-       		var inbox = window.geemails[i];
-       		
-       	}	
-       }
-
-       inbox = document.getElementById("inbox")
+       // alert("Hello Welcome to Justins Zombie mail");
+       // alert("press ok to read mail, but be warned zombies are hiding in here.....somehwere....");
 
       // creating table for the auto generated table using JS
        
        mailTable = document.getElementById("mailTable");
+
+      	// elements in the table 
+
        tr = document.createElement("tr");
        td_sender = document.createElement("td");
        td_date = document.createElement("td");
        td_subject = document.createElement("td");
 
        // iterating through the array to display data
-
-       
-       for(i=0; i<window.geemails.length; i++){""
+		
+		for(i=0; i<window.geemails.length; i++){
        		
-       	tr = document.createElement("tr");
-        td_sender = document.createElement("td");
-        td_date = document.createElement("td");
-        td_subject = document.createElement("td");
-
-       	
+	       	tr = document.createElement("tr");
+	        td_sender = document.createElement("td");
+	        td_date = document.createElement("td");
+	        td_subject = document.createElement("td");
+	        td_body = document.createElement("td");	
+       		
+       		// making text for each data type sender,date,body,subject
        		td_sender.appendChild(document.createTextNode(window.geemails[i].sender));
 
        		td_subject.appendChild(document.createTextNode(window.geemails[i].subject));
 
        		td_date.appendChild(document.createTextNode(window.geemails[i].date));
+       			
+       			td_body.appendChild(document.createTextNode(window.geemails[i].body));
+
+       			td_body.setAttribute("class","mailcontent"); //<td class="mailcontent">
+
+       			//adding data for each type to the table row
 
        		tr.appendChild(td_sender);
        		tr.appendChild(td_subject);
        		tr.appendChild(td_date);
+       		tr.appendChild(td_body);
+       		tr.addEventListener("click",function(){
+       			console.log("table row clicked")
+       		});
        			mailTable.appendChild(tr);
-	};
+	}
+
+		
+		td_mailcount = document.getElementById("mailcount");
+
+      	// data in mail table 
+      	td_mailcount.textContent ="Total mails: "  + window.geemails.length;
 
 
 
+      	// on hover function
+
+      	
+
+      	// on click funtion
+function displaymailcontents(mailcontent){
+	console.log(mailcontent);
+}
+
+       
       };
 
     </script>
+	
+
 	</head>
 	
 	<body>
-		<nav class="zombie">&nbsp;Justins Zombie Mail</nav>
+		<nav class="zombie">&nbsp;Justins Zombie Mail &nbsp;&nbsp;
+		<span id="mailcount"></span></nav>
+
+		
 </table>
 		<div class="container" id="main">
 
-		
 			<table id="mailTable" width="100%" cellpadding="0" cellspacing="0" border="0">
+		</table>
 
-		<!-- 	javascript populating table -->
-
-			</table>
-
+			
  		</div>
  		
 		 <div class="bottom">

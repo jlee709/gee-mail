@@ -21,3 +21,12 @@
 	border-radius: 15px;
 	border: 10px;
 }
+
+#mailcount{
+	color: black;
+	float: right;
+}
+
+.mailcontent{
+	display: none;
+}
