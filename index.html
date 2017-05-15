@@ -7,12 +7,7 @@
 
     <script>
       window.onload = function(){
-        // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
-        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
         
-       // alert("Hello Welcome to Justins Zombie mail");
-       // alert("press ok to read mail, but be warned zombies are hiding in here.....somehwere....");
-
       // creating table for the auto generated table using JS
        
        mailTable = document.getElementById("mailTable");
@@ -24,9 +19,10 @@
        td_date = document.createElement("td");
        td_subject = document.createElement("td");
 
-       // iterating through the array to display data
-		
-		for(i=0; i<window.geemails.length; i++){
+       // iterating through the array to display data with functions for data display
+
+		function displayMailData(){
+			for(i=0; i<window.geemails.length; i++){
        		
 	       	tr = document.createElement("tr");
 	        td_sender = document.createElement("td");
@@ -51,16 +47,21 @@
        		tr.appendChild(td_subject);
        		tr.appendChild(td_date);
        		tr.appendChild(td_body);
-       		tr.addEventListener("click",function(){
-       			console.log("table row clicked")
-       		});
+       		tr.addEventListener("click",displaymailcontents);
+       		//tr.addEventListener("click",function(){
+       		//	console.log(this.children[3].innerText);
+       		//});
        			mailTable.appendChild(tr);
 	}
+	
+}
+		displayMailData();
 
 		
 		td_mailcount = document.getElementById("mailcount");
 
       	// data in mail table 
+
       	td_mailcount.textContent ="Total mails: "  + window.geemails.length;
 
 
@@ -70,8 +71,8 @@
       	
 
       	// on click funtion
-function displaymailcontents(mailcontent){
-	console.log(mailcontent);
+function displaymailcontents(event){
+	console.log(this.children[3].innerText);
 }
 
        
