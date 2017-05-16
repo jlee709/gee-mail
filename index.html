@@ -12,13 +12,43 @@
        
        mailTable = document.getElementById("mailTable");
 
-       alert("Welcome to Justins Zombie Mail, beware of the zombies!!");
-      	// elements in the table 
+       // set interval adding a new message to inbox()table row, accounts for 
+       //total mails + mails incomming from set interval function
 
-       // tr = document.createElement("tr");
-       // td_sender = document.createElement("td");
-       // td_date = document.createElement("td");
-       // td_subject = document.createElement("td");
+        setInterval(function(){ 
+         message = getNewMessage()
+         tr = document.createElement("tr");
+	        td_sender = document.createElement("td");
+	        td_date = document.createElement("td");
+	        td_subject = document.createElement("td");
+	        td_body = document.createElement("td");	
+       		
+       		// making text for each data type sender,date,body,subject
+       		td_sender.appendChild(document.createTextNode(message.sender));
+
+       		td_subject.appendChild(document.createTextNode(message.subject));
+       		td_date.appendChild(document.createTextNode(mdatessage.e))
+       			td_body.appendChild(document.createTextNode(message.body));
+       			td_body.setAttribute("class","mailcontent"); 
+
+       		
+       		//adding data for each type to the table row
+
+       		tr.appendChild(td_sender);
+       		tr.appendChild(td_subject);
+       		tr.appendChild(td_date);
+       		tr.appendChild(td_body);
+       		tr.addEventListener("click",displaymailcontents);
+   
+       			mailTable.appendChild(tr);
+
+       			td_mailcount = document.getElementById("mailcount");
+
+      	// data in mail table accounting for new messages plus standard starting messages.  
+
+      	td_mailcount.textContent ="Total mails: "  + mailTable.children.length;
+
+     }, 1000);
 
        
        // iterating through the array to display data with functions for data display
@@ -65,7 +95,7 @@
 
 
 
-      	// on click funtion
+      	// Displaying mail conttendts to page
 function displaymailcontents(event){
 	console.log(this.children[3].innerText);
 	mailSender = document.getElementById("mailSender");
@@ -103,11 +133,10 @@ window.onclick = function(event) {
        
       };
 
-    </script>
-	<script>
+      
 
+    </script>
 	
-</script>
 
 	</head>
 	
@@ -142,7 +171,7 @@ window.onclick = function(event) {
  		</div>
  		
 		 <div class="bottom">
-			<footer>Justins Zombie Mail</footer>
+			<footer>Justins geemail app</footer>
 		 </div>
 		
 
