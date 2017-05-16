@@ -31,6 +31,25 @@
 	display: none;
 }
 
+#mailtable{
+	/* styling to the whole table */
+}
+#mailtable tr{
+	/* styling the row */
+}
+#mailtable tr:nth-child(even){
+	/* style for even row */
+	background-color: #ddd;
+}
+#mailtable tr td{
+	/* style table cells */
+	
+	font-size: 18px;
+	font-style: italic;
+	font-family: sans-serif;
+
+
+}
 
 /*Below code was taken from w3Schools modal display page https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2*/
 

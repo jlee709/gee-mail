@@ -8,6 +8,8 @@
     <script>
       window.onload = function(){
         
+
+        geemails = window.geemails;
       // creating table for the auto generated table using JS
        
        mailTable = document.getElementById("mailTable");
@@ -16,18 +18,21 @@
        //total mails + mails incomming from set interval function
 
         setInterval(function(){ 
-         message = getNewMessage()
+         message = getNewMessage();
+         geemails.push(message);
          tr = document.createElement("tr");
 	        td_sender = document.createElement("td");
 	        td_date = document.createElement("td");
 	        td_subject = document.createElement("td");
-	        td_body = document.createElement("td");	
+	        td_body = document.createElement("td");
+
+
        		
        		// making text for each data type sender,date,body,subject
        		td_sender.appendChild(document.createTextNode(message.sender));
 
        		td_subject.appendChild(document.createTextNode(message.subject));
-       		td_date.appendChild(document.createTextNode(mdatessage.e))
+       		td_date.appendChild(document.createTextNode(message.date));
        			td_body.appendChild(document.createTextNode(message.body));
        			td_body.setAttribute("class","mailcontent"); 
 
