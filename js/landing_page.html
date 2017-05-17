@@ -11,6 +11,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="css/style.css" rel="stylesheet" media="screen">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+ <script type="text/javascript">
+    document.getElementById("next").onclick = function () {
+        location.href = "https://www.youtube.com";
+    };
+</script>
+
+
   <style>
   body {
       font: 20px Montserrat, sans-serif;
@@ -107,8 +115,12 @@
   <h2 class="margin">Mini Bio</h2>
   <h4> My name is Justin and im From Newfoundland Canada~! Yes B'Y! Moved to Korea about 5 years ago to complete my studies and thats where I first became interested in Code. The past few years I have been working as an Educator In Seoul at the Univeristy level and at the Kinder/Elementary level. I like Martial Arts, Tech and Gaming!  Make sure to Click the "Code Challange" button to see the work completed for the application! Cheeers!</h4>
   <a href="#" class="btn btn-default btn-lg">
-    <span class="glyphicon glyphicon-search"></span> Code Challange!
-  </a>
+    
+  <form action="index.html">
+    <button type="submit">Code Challange!</button>
+</form>
+
+    <span class="glyphicon glyphicon-search" id="next"></span>Code Challange!</a>
 </div>
 
 <!-- Third Container (Grid) -->
@@ -120,7 +132,7 @@
 
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com"> W3 schools and Edited slightly by Justin :)</a></p> 
 </footer>
 
 </body>
