@@ -5,9 +5,11 @@
 	font-family: sans-serif;
 
 }
-
+nav.zombie{
+    color: #252831;
+}
 .zombie {
-	color: red;
+	color: #5cb85c;
 	text-decoration: none;
 	font-size: 30px;
 	border:2px;
@@ -16,10 +18,11 @@
 }
 
 .bottom{
-	color: red;
-	font-size: 15px;
-	border-radius: 15px;
-	border: 10px;
+    padding-top: 50px;
+	color: black;
+	font-size: 25px;
+	border-radius: 20px;
+	border: 20px;
 }
 
 #mailcount{
@@ -36,6 +39,7 @@
 }
 #mailtable tr{
 	/* styling the row */
+    height:40px;
 }
 #mailtable tr:nth-child(even){
 	/* style for even row */
@@ -113,11 +117,43 @@
 
 .modal-header {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #252831;
     color: white;
 }
 
-.modal-body {padding: 2px 16px;}
+.modal-body {
+    padding: 20px 16px;
+
+    }
+
+#mailSubject{
+    font-weight: bold;
+    font-size: 40px;
+    color: #fff;
+    
+}
+
+#mailSender {
+    font-weight: bold;
+    font-size: 22px;
+    padding-bottom: 7.5px;
+
+}
+
+
+#mailDate{
+    float: right;   
+    font-style: italic;
+    font-size: 22px;
+}
+
+
+#mailBody{
+    padding-top: 10px;
+    font-size: 25px;
+    padding-bottom: 15px;
+
+}
 
 .modal-footer {
     padding: 2px 16px;
@@ -129,7 +165,26 @@
 	background-color:  #fff;
 }
 
-.background-counter{
-    background-color: #1abc9c;
+#counter{
+    font-color: white;
+}
+
+#info{
+     width: 100%;
+    font-family: 'Lobster', italic;
+    font-size: 35px;
+    background-color: #252831;
+}
+
+p {
+    color: white;
+    padding: 0;
+    margin: 0;
+    padding-top: 60;
+    padding-bottom: 60;
+}
+
+.emailSender {
+    font-weight:bold; 
 }
 

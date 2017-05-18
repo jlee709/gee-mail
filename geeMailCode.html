@@ -10,17 +10,9 @@
 p {
   text-align: center;
   font-size: 30px;
-}
+}   
 </style>
-    
-    
-
-<script>
-
- </script>
-
-
-<!--  count down timer code end -->
+   
 
     <script>
       window.onload = function(){
@@ -58,8 +50,6 @@ p {
 
 // Mycode begins here :)
 
-        alert("WARNING many email missles incomming!");
-
         geemails = window.geemails;
       // creating table for the auto generated table using JS
        
@@ -85,7 +75,10 @@ p {
        		td_body.appendChild(document.createTextNode(message.body));
        			td_body.setAttribute("class","mailcontent"); 
 
-       		
+            // making rows fit screen
+       		td_date.setAttribute("width","400px");
+          // giving email sender different class
+          td_sender.setAttribute("class","emailSender"); 
        		//adding data for each type to the table row
 
        		tr.appendChild(td_sender);
@@ -121,12 +114,15 @@ p {
 
        		td_sender.appendChild(document.createTextNode(window.geemails[i].sender));
 
+          td_sender.setAttribute("class","emailSender"); 
+
        		td_subject.appendChild(document.createTextNode(window.geemails[i].subject));
 
        		td_date.appendChild(document.createTextNode(window.geemails[i].date));
        			
        		td_body.appendChild(document.createTextNode(window.geemails[i].body));
 
+            td_date.setAttribute("width","400px");
        		td_body.setAttribute("class","mailcontent"); 
 
        		//adding data for each type to the table row
@@ -194,7 +190,7 @@ window.onclick = function(event) {
 	
 	<body>
   <p id="info" class="">Days Until Dev League - <span id="counter"></span></p>
-		<nav class="zombie">&nbsp;Justins "RAPID-FIRE!!!"" GeeMail &nbsp;&nbsp;
+		<nav class="zombie">&nbsp;Justins GeeMail App~ &nbsp;&nbsp;
 		<span id="mailcount"></span></nav>
 	</table>
 
@@ -215,10 +211,9 @@ window.onclick = function(event) {
       <h2 id="mailSubject"></h2>
     </div>
     <div class="modal-body">
-      <div id="mailSender"></div>
-    	<div id="mailDate"></div>
-			<div id="mailBody">
-	</div>
+    <div id="mailDate"></div>
+    <div id="mailSender"></div>
+		<div id="mailBody"></div>
    </div>
   </div>
 </div>
